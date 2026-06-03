@@ -86,9 +86,9 @@ dependencies {
     implementation 'com.github.azeesoft:AzeeColorPicker:1.0.8'
 
     // JoyStick Library (com.erz.joysticklibrary パッケージ)
-    // ※ erz05リポジトリが非公開(401)のためローカルAARを使用
-    // → app/libs/JoyStickLibrary.aar をリポジトリに追加してください（手順は下記参照）
-    implementation files('libs/JoyStickLibrary.aar')
+    // ※ JoyStickLibraryリポジトリが非公開のため erz05/JoyStick v2.0.0 に変更
+    // ※ 旧来のViewベース JoyStick クラスは後方互換で使用可能
+    implementation 'com.github.erz05:JoyStick:2.0.0'
 
     // Device Name
     implementation 'com.jaredrummler:android-device-names:2.1.1'
