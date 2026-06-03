@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+	<string name="amiibo_bin_path"></string>
+    <string name="amiibo_experimental_text"></string>
     <string name="app_name">MHXX スナイプ</string>
     <!-- JoyConDroid BT HID strings -->
     <string name="bt_not_available">Bluetooth is not available</string>
