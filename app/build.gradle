@@ -81,12 +81,6 @@ dependencies {
     compileOnly 'org.projectlombok:lombok:1.18.30'
     annotationProcessor 'org.projectlombok:lombok:1.18.30'
 
-    // Color Picker - ローカル library module
-    implementation project(':libraries:AndroidPhotoshopColorPicker')
-
-    // JoyStick Library - ローカル library module
-    implementation project(':libraries:JoyStick:joysticklibrary')
-
     // Device Name
     implementation 'com.jaredrummler:android-device-names:2.1.1'
 
