@@ -14,7 +14,6 @@ android {
         versionCode 2
         versionName "2.0"
         buildConfigField 'boolean', 'VM', 'false'
-    
         buildConfigField  'int', 'LOG_LEVEL', '0'
         buildConfigField  'byte[]', 'DEBUG_INPUT', '{0x21, 0x31, 0x30}'
         buildConfigField  'byte[]', 'DEBUG_OUTPUT', '{0x11, 0x01}'
@@ -25,7 +24,6 @@ android {
         debug {
             applicationIdSuffix ".debug"
             debuggable true
-         
             buildConfigField 'boolean', 'VM', 'true'
         }
         release {
@@ -35,12 +33,12 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
 
     kotlinOptions {
-         jvmTarget = '1.8'
+        jvmTarget = '17'
     }
 
     // assets フォルダをソースセットに含める
@@ -83,12 +81,11 @@ dependencies {
     compileOnly 'org.projectlombok:lombok:1.18.30'
     annotationProcessor 'org.projectlombok:lombok:1.18.30'
 
-    // Color Picker (JoyConDroid設定画面用)
-    // 【修正箇所】裏でエラーを起こしている行方不明の2つのライブラリを、強制的に読み込ませないようにブロックしました
-    implementation('com.github.alexandre-g:AndroidPhotoshopColorPicker:1.2.4') {
-        exclude group: 'com.github.azeesoft', module: 'AzeeColorPicker'
-        exclude group: 'com.github.erz05', module: 'JoyStick'
-    }
+    // Color Picker - JitPack 経由で取得
+    implementation 'com.github.aziztitu:AndroidPhotoshopColorPicker:1.0.9'
+
+    // JoyStick Library - JitPack 経由で取得
+    implementation 'com.github.erz05:JoyStick:1.1.0'
 
     // Device Name
     implementation 'com.jaredrummler:android-device-names:2.1.1'
