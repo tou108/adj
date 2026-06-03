@@ -88,4 +88,11 @@ dependencies {
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:converter-jackson:2.9.0'
     implementation 'commons-io:commons-io:2.13.0'
+
+    // ★ 欠けていた依存性を追加
+    // JoyStick ライブラリ（LeftJoyConFragment、RightJoyConFragment で使用）
+    implementation 'com.erz:joysticklibrary:1.1.6'
+
+    // ColorPicker ライブラリ（ColorPickerFragment で使用）
+    implementation 'com.azeesoft.lib:colorpicker:1.0.0'
 }
