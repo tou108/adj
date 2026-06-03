@@ -28,12 +28,18 @@
         <item name="colorOnSurfaceInverse">@color/md_theme_light_inverseOnSurface</item>
         <item name="colorSurfaceInverse">@color/md_theme_light_inverseSurface</item>
         <item name="colorPrimaryInverse">@color/md_theme_light_inversePrimary</item>
-        <!-- カスタムカラー属性（レイアウト・ドローアブルから ?attr/ で参照） -->
+            <!-- カスタムカラー属性（レイアウト・ドローアブルから ?attr/ で参照） -->
         <item name="colorCustomBrandBlue">@color/custom_brand_blue</item>
         <item name="colorCustomBrandRed">@color/custom_brand_red</item>
         <item name="colorCustomLauncherBackground">@color/custom_launcher_background</item>
         <item name="colorCustomFocused">@color/custom_focused</item>
         <item name="colorCustomPressed">@color/custom_pressed</item>
         <item name="colorCustomReleased">@color/custom_released</item>
+    </style>
+
+    <!-- NavigationView メニューのテキスト外観（activity_main_drawer.xml から参照） -->
+    <style name="MenuTextAppearance" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
     </style>
 </resources>

@@ -31,6 +31,11 @@
     <string name="update_available">アップデートあり</string>
     <string name="update_message">新しいバージョンが利用可能です</string>
     <string name="update">アップデート</string>
+    <!-- 不足していたリソース -->
+    <string name="version_name">v2.0</string>
+    <string name="discord">Discord</string>
+    <string name="select">選択</string>
+</resources>
     <string name="amiibo_experimental_title">경고</string>
     <string name="amiibo_file_cannot_be">경고! NFC 바이너리를 설정할 수 없습니다.</string>
     <string name="amiibo_file_preset">NFC 바이너리가 설정되었습니다.</string>
