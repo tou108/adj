@@ -81,8 +81,11 @@ dependencies {
     compileOnly 'org.projectlombok:lombok:1.18.30'
     annotationProcessor 'org.projectlombok:lombok:1.18.30'
 
-    // Color Picker (JoyConDroid設定画面用)
-    implementation 'com.github.alexandre-g:AndroidPhotoshopColorPicker:1.2.4'
+    // Color Picker (com.azeesoft.lib.colorpicker パッケージ)
+    implementation 'com.azeesoft.lib:colorpicker:1.0.8'
+
+    // JoyStick Library (com.erz.joysticklibrary パッケージ)
+    implementation 'com.github.erz05:JoyStickLibrary:v2.0.6'
 
     // Device Name
     implementation 'com.jaredrummler:android-device-names:2.1.1'
