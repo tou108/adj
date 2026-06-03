@@ -82,7 +82,6 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok:1.18.30'
 
     // Color Picker (JoyConDroid設定画面用)
-    implementation 'com.github.alexandre-g:AndroidPhotoshopColorPicker:1.2.4'
 
     // Device Name
     implementation 'com.jaredrummler:android-device-names:2.1.1'
