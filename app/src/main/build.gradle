@@ -1,0 +1,101 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    namespace 'com.mhxx.snipe'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.mhxx.snipe"
+        minSdk 28          // BluetoothHidDevice API 28以上必須
+        targetSdk 34
+        versionCode 2
+        versionName "2.0"
+        buildConfigField 'boolean', 'VM', 'false'
+    
+        buildConfigField  'int', 'LOG_LEVEL', '0'
+        buildConfigField  'byte[]', 'DEBUG_INPUT', '{0x21, 0x31, 0x30}'
+        buildConfigField  'byte[]', 'DEBUG_OUTPUT', '{0x11, 0x01}'
+        buildConfigField  'boolean', 'CHECK_UPDATE', 'false'
+    }
+
+    buildTypes {
+        debug {
+            applicationIdSuffix ".debug"
+            debuggable true
+         
+            buildConfigField 'boolean', 'VM', 'true'
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    // 【修正箇所】Javaの互換性レベルを 1.8 から 17 に引き上げました
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    // 【修正箇所】Kotlinのターゲットも 1.8 から 17 に合わせました
+    kotlinOptions {
+         jvmTarget = '17'
+    }
+
+    // assets フォルダをソースセットに含める
+    sourceSets {
+        main {
+            assets.srcDirs = ['src/main/assets']
+        }
+    }
+
+    buildFeatures {
+        buildConfig = true
+    }
+
+    // JoyConDroid からのコピーで必要
+    androidResources {
+        noCompress 'jcui'
+    }
+
+    lint {
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.core:core-ktx:1.12.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.preference:preference:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.drawerlayout:drawerlayout:1.2.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.media:media:1.7.0'
+    implementation 'androidx.vectordrawable:vectordrawable-animated:1.1.0'
+
+    // ★ Google ML Kit 日本語テキスト認識
+    implementation 'com.google.mlkit:text-recognition-japanese:16.0.0'
+
+    // ★ JoyConDroid Bluetooth HID 依存
+    // Lombok（@Data, @Getter, @Setter, @SneakyThrows）
+    compileOnly 'org.projectlombok:lombok:1.18.30'
+    annotationProcessor 'org.projectlombok:lombok:1.18.30'
+
+    // Color Picker (JoyConDroid設定画面用)
+    implementation('com.github.alexandre-g:AndroidPhotoshopColorPicker:1.2.4') {
+        exclude group: 'com.github.azeesoft', module: 'AzeeColorPicker'
+        exclude group: 'com.github.erz05', module: 'JoyStick'
+    }
+
+    // Device Name
+    implementation 'com.jaredrummler:android-device-names:2.1.1'
+
+    // Retrofit (JoyConDroidバージョンチェック用)
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-jackson:2.9.0'
+    implementation 'commons-io:commons-io:2.13.0'
+}
