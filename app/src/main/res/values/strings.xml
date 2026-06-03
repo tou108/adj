@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MHXX スナイプ</string>
+    <!-- JoyConDroid BT HID strings -->
+    <string name="bt_not_available">Bluetooth is not available</string>
+    <string name="bt_enable_canceled">Error occurred while enabling Bluetooth.</string>
+    <string name="connected_to_switch">Switchに接続しました</string>
+    <string name="disconnected_from_switch">Switchから切断しました</string>
+    <string name="left_joycon">Left JoyCon</string>
+    <string name="right_joycon">Right JoyCon</string>
+    <string name="pro_controller">Pro Controller</string>
+    <string name="accept">Accept</string>
+    <string name="bt_name_not_set">Bluetooth名を変更できませんでした: %1$s に手動で設定してください。</string>
+    <string name="bt_sdp_failed">SDP設定に失敗しました</string>
+    <string name="bt_register_failed">Bluetoothアプリ登録に失敗しました</string>
+    <string name="disconnect_controller">コントローラーを切断</string>
+    <string name="device_is_not_compatible">このデバイスはBluetooth HIDをサポートしていない可能性があります。</string>
+    <string name="ok">OK</string>
+    <string name="settings">設定</string>
+    <string name="unknown">不明</string>
+    <string name="set_bt_address">SwitchのMACアドレスを入力（接続精度向上）</string>
+    <string name="later">後で</string>
+    <string name="set">設定</string>
+    <string name="incorrect_mac_address">MACアドレスの形式が正しくありません</string>
+    <string name="never_ask_again">次回から聞かない</string>
+    <string name="bt_config_is_reverted">Bluetooth設定を元に戻しました</string>
+    <string name="bt_config_was_not_changed">Bluetooth設定は変更されていません</string>
+    <string name="close">閉じる</string>
+    <string name="update_available">アップデートあり</string>
+    <string name="update_message">新しいバージョンが利用可能です</string>
+    <string name="update">アップデート</string>
+</resources>
