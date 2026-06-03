@@ -82,7 +82,7 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok:1.18.30'
 
     // Color Picker - ローカル library module
-    implementation project(':libraries:AndroidPhotoshopColorPicker:colorpicker')
+    implementation project(':libraries:AndroidPhotoshopColorPicker')
 
     // JoyStick Library - ローカル library module
     implementation project(':libraries:JoyStick:joysticklibrary')
