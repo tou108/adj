@@ -16,5 +16,3 @@ dependencyResolutionManagement {
 
 rootProject.name = "MhxxSnipeApp"
 include ':app'
-include ':libraries:AndroidPhotoshopColorPicker'
-include ':libraries:JoyStick:joysticklibrary'
