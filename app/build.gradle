@@ -90,10 +90,6 @@ dependencies {
     implementation 'commons-io:commons-io:2.13.0'
 
     // ★ 欠けていた依存性を追加（README.md に記載）
-    // JoyStick ライブラリ（LeftJoyConFragment、RightJoyConFragment、ProControllerFragment で使用）
-    // JitPack リポジトリから取得（+で最新バージョンを自動取得）
-    implementation 'com.github.erz05:JoyStick:+'
-
     // ColorPicker ライブラリ（ColorPickerFragment で使用）
     // README.md より：com.github.alexandre-g:AndroidPhotoshopColorPicker:1.2.4
     implementation 'com.github.alexandre-g:AndroidPhotoshopColorPicker:1.2.4'
