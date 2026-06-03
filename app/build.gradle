@@ -89,10 +89,12 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-jackson:2.9.0'
     implementation 'commons-io:commons-io:2.13.0'
 
-    // ★ 欠けていた依存性を追加
-    // JoyStick ライブラリ（LeftJoyConFragment、RightJoyConFragment で使用）
-    implementation 'com.erz:joysticklibrary:1.1.6'
+    // ★ 欠けていた依存性を追加（README.md に記載）
+    // JoyStick ライブラリ（LeftJoyConFragment、RightJoyConFragment、ProControllerFragment で使用）
+    // JitPack リポジトリから取得
+    implementation 'com.github.erz05:JoyStick:1.1.0'
 
     // ColorPicker ライブラリ（ColorPickerFragment で使用）
-    implementation 'com.azeesoft.lib:colorpicker:1.0.0'
+    // README.md より：com.github.alexandre-g:AndroidPhotoshopColorPicker:1.2.4
+    implementation 'com.github.alexandre-g:AndroidPhotoshopColorPicker:1.2.4'
 }
